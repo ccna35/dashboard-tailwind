@@ -5,11 +5,325 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="public/output.css" />
+    <script defer src="main.js"></script>
     <title>Tailwind Dashboard</title>
   </head>
-  <body>
-    <div class="">
-      <p>Hello world!</p>
+  <body class="font-body">
+    <div class="main grid md:grid-cols-minisidebar xl:grid-cols-sidebar">
+      <div
+        class="left-panel bg-red-400 h-screen z-10 shadow-leftPanel hidden md:block"
+      >
+        <!-- start navbar -->
+        <nav class="py-4 bg-secondary-100 grid place-items-center h-nav">
+          <img
+            src="https://coderthemes.com/hyper/saas/assets/images/logo-sm.png"
+            alt=""
+            class="w-8 xl:hidden"
+          />
+          <img
+            src="https://coderthemes.com/hyper/saas/assets/images/logo.png"
+            alt=""
+            class="w-24 hidden xl:block"
+          />
+        </nav>
+        <!-- start navigation -->
+        <div class="navigation overflow-y-scroll h-full bg-slate-600">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
+          voluptatem, consectetur doloribus quaerat modi fugiat libero, amet
+          explicabo incidunt adipisci deleniti aliquid exercitationem molestias
+          ea consequuntur fuga hic natus voluptate harum reprehenderit magni
+          quas cupiditate assumenda? Sint fuga maiores nam doloremque sed odit,
+          reprehenderit magni, assumenda aspernatur error dolor quas fugiat nisi
+          est quaerat eos maxime incidunt? Voluptatem explicabo eaque et illo
+          autem minus rerum libero at mollitia, aspernatur, cupiditate veritatis
+          vitae eius molestias voluptas ea officia labore consequatur.
+          Obcaecati, explicabo. Amet ex temporibus voluptatum, ipsa porro
+          praesentium ullam voluptatibus fugiat inventore quod commodi?
+          Provident reprehenderit laborum nihil at praesentium?
+        </div>
+      </div>
+      <div class="main-content">
+        <nav
+          class="px-6 bg-secondary-100 h-nav flex items-center shadow relative"
+        >
+          <div
+            class="w-full h-full flex text-slate-400 mx-auto items-center justify-between"
+          >
+            <img
+              src="https://coderthemes.com/hyper/saas/assets/images/logo-sm.png"
+              alt=""
+              class="w-8 md:hidden"
+            />
+            <div
+              class="menu w-full h-full flex gap-8 items-center justify-end lg:justify-between"
+            >
+              <a href="#" class="hover:text-white transition-colors burger"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:hidden"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+
+              <form class="h-9 shadow hidden lg:inline-flex">
+                <div
+                  class="icon grid place-items-center px-2 bg-secondary-400 rounded-tl rounded-bl"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                  </svg>
+                </div>
+
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Search..."
+                  class="px-2 focus:outline-none bg-secondary-400"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  class="bg-primary-200 text-white px-3 hover:bg-primary-100 transition duration-500 rounded-r"
+                />
+              </form>
+
+              <a href="#" class="hover:text-white transition-colors relative"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5"
+                  />
+                </svg>
+                <span
+                  class="absolute w-2 h-2 bg-red-600 top-0 right-0 rounded-full"
+                ></span>
+              </a>
+              <a
+                href="#"
+                class="hover:text-white transition-colors hidden lg:block"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="hover:text-white transition-colors hidden lg:block"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="hover:text-white transition-colors hidden lg:block"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                  />
+                </svg>
+              </a>
+
+              <div
+                class="profile flex items-center gap-2 px-4 py-2 bg-slate-600 h-full bg-opacity-50 hover:text-gray-300 transition cursor-pointer"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                  alt="profile picture"
+                  class="w-8 rounded-full"
+                />
+                <div class="user-details text-start hidden lg:block">
+                  <p class="font-bold">John Smith</p>
+                  <p class="font-thin">Founder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="body-content bg-secondary-300 w-full h-full p-6">
+          <section class="grid gap-6 grid-cols-1 md:grid-cols-2 mb-6">
+            <div
+              class="squares col-span-1 md:col-span-1 grid gap-6 grid-cols-1 sm:grid-cols-2 grid-rows-2"
+            >
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+            </div>
+            <div class="chart rounded col-span-1 bg-secondary-200">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              iusto in quibusdam esse animi. Veniam explicabo aspernatur
+              voluptatum optio, dicta quibusdam sit dolorum non! Sapiente
+              asperiores voluptates consequatur ullam. Magnam ut nam impedit
+              voluptas nemo maiores optio soluta temporibus iusto veritatis, ab,
+              error quod, culpa voluptatem nihil! Incidunt soluta quasi nostrum
+              eius sapiente. Fugit alias ad eaque, neque enim doloribus ipsam
+              velit accusantium. Atque nostrum laboriosam dolor facere quaerat,
+              corporis optio neque quisquam minima doloribus sit nisi facilis
+              consequatur beatae sapiente autem iure, ipsam voluptas voluptatem
+              magnam. Nisi, cum vero amet dolore vel quis inventore, veniam
+              provident adipisci iusto sequi.
+            </div>
+          </section>
+          <section class="grid gap-6 grid-cols-1 md:grid-cols-2 mb-6">
+            <div
+              class="squares col-span-1 md:col-span-1 grid gap-6 grid-cols-1 sm:grid-cols-2 grid-rows-2"
+            >
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+              <div
+                class="rounded p-4 text-start shadow bg-secondary-200 text-slate-300 flex flex-col gap-4"
+              >
+                <h6 class="">Customers</h6>
+                <h5 class="text-2xl">36,254</h5>
+                <p class="text-green-500">5.27%</p>
+                <p class="">Since last month</p>
+              </div>
+            </div>
+            <div class="chart rounded col-span-1 bg-secondary-200">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              iusto in quibusdam esse animi. Veniam explicabo aspernatur
+              voluptatum optio, dicta quibusdam sit dolorum non! Sapiente
+              asperiores voluptates consequatur ullam. Magnam ut nam impedit
+              voluptas nemo maiores optio soluta temporibus iusto veritatis, ab,
+              error quod, culpa voluptatem nihil! Incidunt soluta quasi nostrum
+              eius sapiente. Fugit alias ad eaque, neque enim doloribus ipsam
+              velit accusantium. Atque nostrum laboriosam dolor facere quaerat,
+              corporis optio neque quisquam minima doloribus sit nisi facilis
+              consequatur beatae sapiente autem iure, ipsam voluptas voluptatem
+              magnam. Nisi, cum vero amet dolore vel quis inventore, veniam
+              provident adipisci iusto sequi.
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
