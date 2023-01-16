@@ -43,7 +43,7 @@
 
 // // config
 // const config = {
-//   type: "line",
+//   type: "bar",
 //   data,
 //   options: {
 //     scales: {
@@ -54,8 +54,69 @@
 //   },
 // };
 
-// // render init block
+// render init block
 // const myChart = new Chart(document.getElementById("myChart"), config);
+
+// first chart : bar chart
+const ctx = document.getElementById("myChart");
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1,
+      },
+      {
+        label: "# of Votes",
+        data: [62, 79, 53, 35, 72, 93],
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    animation: true,
+    pointRadius: 10,
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
+
+// second chart : line chart
+const ctx2 = document.getElementById("myChart2");
+
+new Chart(ctx2, {
+  type: "line",
+  data: {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 3,
+      },
+      {
+        label: "# of Votes",
+        data: [57, 90, 30, 45, 62, 73],
+        borderWidth: 3,
+      },
+    ],
+  },
+  options: {
+    animation: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
 
 // left panel code
 const burger = document.querySelector(".burger");
@@ -77,3 +138,39 @@ burger.addEventListener("click", () => {
 });
 
 // console.log(main.classList);
+
+const navItems = document.querySelectorAll(".nav-item");
+const navList = document.querySelector(".nav-item ul");
+
+console.log(navList.scrollHeight);
+
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const subMenu = item.querySelector("ul");
+    navItems.forEach((item) => {
+      const subMenu = item.querySelector("ul");
+      subMenu.style.maxHeight = null;
+    });
+    if (subMenu.style.maxHeight) {
+      subMenu.style.maxHeight = null;
+    } else {
+      subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+    }
+  });
+});
+
+// fullscreen code
+
+const fullscreenIcon = document.querySelector(".fullscreen");
+
+let fullScreenStatus = false;
+
+fullscreenIcon.addEventListener("click", () => {
+  if (fullScreenStatus) {
+    document.exitFullscreen();
+    fullScreenStatus = false;
+  } else {
+    document.documentElement.requestFullscreen();
+    fullScreenStatus = true;
+  }
+});
