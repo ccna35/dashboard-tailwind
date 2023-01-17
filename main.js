@@ -127,7 +127,7 @@ let clicked = false;
 burger.addEventListener("click", () => {
   console.log("clicked");
   if (!clicked) {
-    main.style.cssText = "grid-template-columns: 18rem auto";
+    main.style.cssText = "grid-template-columns: 16.25rem auto";
 
     clicked = true;
   } else {
@@ -141,8 +141,6 @@ burger.addEventListener("click", () => {
 
 const navItems = document.querySelectorAll(".nav-item");
 const navList = document.querySelector(".nav-item ul");
-
-console.log(navList.scrollHeight);
 
 navItems.forEach((item) => {
   item.addEventListener("click", () => {

@@ -26,7 +26,7 @@ module.exports = {
         navbar: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
       },
       gridTemplateColumns: {
-        sidebar: "18rem auto",
+        sidebar: "16.25rem auto",
         minisidebar: "4.375rem auto",
       },
     },

@@ -885,6 +885,10 @@ video {
   width: 0.5rem;
 }
 
+.w-64{
+  width: 16rem;
+}
+
 .flex-shrink{
   flex-shrink: 1;
 }
@@ -2719,6 +2723,11 @@ video {
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.hover\:text-gray-100:hover{
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
 .hover\:scrollbar-w-1:hover::-webkit-scrollbar{
   width: 0.25rem;
 }
@@ -2816,10 +2825,6 @@ video {
 }
 
 @media (min-width: 1024px){
-  .lg\:relative{
-    position: relative;
-  }
-
   .lg\:block{
     display: block;
   }
@@ -2859,7 +2864,7 @@ video {
   }
 
   .xl\:grid-cols-sidebar{
-    grid-template-columns: 18rem auto;
+    grid-template-columns: 16.25rem auto;
   }
 
   .xl\:grid-cols-4{
